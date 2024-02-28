@@ -19,7 +19,6 @@ public class FacebookSignup {
 		
 		WebElement daydropdown = driver.findElement(By.id("day"));
 	    WebElement monthDropDown = driver.findElement(By.id("month"));
-	    WebElement yearDropDown = driver.findElement(By.id("year"));
 	   
 	    Select day = new Select(daydropdown);
 	    boolean result = day.isMultiple();
@@ -37,7 +36,7 @@ public class FacebookSignup {
 		  
 		 Select month = new Select(monthDropDown);
 		 boolean result1 = month.isMultiple();
-	     System.out.println("monthDropdown is multiple?:"+result);
+	     System.out.println("monthDropdown is multiple? :"+result1);
 		
 		 List<WebElement> monthOptions = month.getOptions();
 		 for(WebElement we :monthOptions)
@@ -48,21 +47,6 @@ public class FacebookSignup {
 		 month.selectByValue("6");
 		 System.out.println("---------------------------------------------");
 		 System.out.println();
-			  
-		 Select year = new Select(yearDropDown);
-	     boolean result3 = year.isMultiple();
-	     System.out.println("year is multiple?:"+result3);
-			
-		 List<WebElement> yearOptions = year.getOptions();
-		 for(WebElement we :yearOptions)
-		 {
-			 System.out.println(we.getText());
-		 }
-			
-		 year.selectByValue("2021");
-		 System.out.println("---------------------------------------------");
-		 System.out.println();
-		  
 		
 	
 	}
