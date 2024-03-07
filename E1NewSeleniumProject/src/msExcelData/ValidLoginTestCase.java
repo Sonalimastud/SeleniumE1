@@ -17,19 +17,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ValidLoginTestCase {
 
 	public static void main(String[] args) throws EncryptedDocumentException, IOException, InterruptedException{
-		FileInputStream fls = new FileInputStream("./data/testData.xlsx");
-		Workbook wb = WorkbookFactory.create(fls);
-	    Sheet sheet = wb.getSheet("validcreds");
-	    Row row = sheet.getRow(1);
-	    Cell cell = row.getCell(0);
-	    String usnData = cell.getStringCellValue();
+		FileInputStream fls = new FileInputStream("./data/testData.xlsx"); //Provide the path of the file
+		Workbook wb = WorkbookFactory.create(fls); // to make the file ready to read
+	    Sheet sheet = wb.getSheet("validcreds"); // to get into the sheet
+	    Row row = sheet.getRow(1); // To get into the row
+	    Cell cell = row.getCell(0); // To get into the cell
+	    String usnData = cell.getStringCellValue(); // To read the data from the cell
 	    
-	    FileInputStream fls1 = new FileInputStream("./data/testData.xlsx");
-		Workbook wb1 = WorkbookFactory.create(fls1);
-	    Sheet sheet1 = wb1.getSheet("validcreds");
-	    Row row1 = sheet1.getRow(1);
-	    Cell cell1 = row1.getCell(1);
-	    String pwdData = cell1.getStringCellValue();
+	    FileInputStream fls1 = new FileInputStream("./data/testData.xlsx"); //Provide the path of the file
+		Workbook wb1 = WorkbookFactory.create(fls1); // to make the file ready to read
+	    Sheet sheet1 = wb1.getSheet("validcreds"); // to get into the sheet
+	    Row row1 = sheet1.getRow(1); // To get into the row
+	    Cell cell1 = row1.getCell(1); // To get into the cell
+	    String pwdData = cell1.getStringCellValue(); // To read the data from the cell
 	    
 	   WebDriver driver = new ChromeDriver();
 	   driver.manage().window().maximize();
