@@ -38,6 +38,24 @@ public class LoginPage extends BaseTest {
 		return actitimaeLink;
 	}
 	
+	public void validLoginMethod(String username, String password) throws InterruptedException
+	{
+		unsTb.sendKeys(username);
+		Thread.sleep(2000);
+		pwdTb.sendKeys(password);
+		Thread.sleep(2000);
+		loginButton.click();
+	}
 	
+	public void invalidLoginMethod(String username, String password) throws InterruptedException
+	{
+		unsTb.sendKeys(username);
+		Thread.sleep(2000);
+		pwdTb.sendKeys(password);
+		Thread.sleep(2000);
+		loginButton.click();
+		Thread.sleep(1000);
+		unsTb.clear();
+	}
 
 }
