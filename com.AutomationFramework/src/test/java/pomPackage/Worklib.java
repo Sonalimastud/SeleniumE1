@@ -2,7 +2,7 @@ package pomPackage;
 
 import java.util.Random;
 
-public class Worklib {
+public class Worklib extends BaseTest{
 	
 	public int randomNum()
 	{
