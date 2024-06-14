@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="learningTestNG.AlwaysRunFlag">
+      <class name="testNGListener.ValidLogin">
         <methods>
-          <include name="addToCart"/>
           <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- learningTestNG.AlwaysRunFlag -->
+      </class> <!-- testNGListener.ValidLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
